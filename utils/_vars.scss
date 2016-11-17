@@ -1,0 +1,65 @@
+// ----------------------------------------------
+//                Variables
+// ----------------------------------------------
+
+$font-size-base:                                16px; // Mobile
+$font-size-base-l:                              18px; // Desktop
+
+@function em($pixels, $context: $font-size-base-l) {
+  @return #{$pixels/$context}em;
+}
+
+
+// Responsive Breakpoints - Mobile first
+$breakpoint-s:                                  501px !default;
+$breakpoint-m:                                  768px !default;
+$breakpoint-l:                                  1025px !default;
+$breakpoint-xl:                                 1280px !default;
+
+// Grid Containers
+$container:                                     100% !default;
+$container-max-width:                           1400px !default;
+
+// Grid Gutters
+$grid-gutter:                                   20px !default;
+$grid-gutter-m:                                 $grid-gutter !default;
+$grid-gutter-l:                                 40px !default;
+$grid-gutter-xl:                                $grid-gutter-l !default;
+
+
+// Media Breakpoint - min
+@mixin breakpoint($bp) {
+  @if $bp == xl {
+    @media only screen and (min-width: $breakpoint-xl) { @content ; }
+  }
+  @else if $bp == l {
+    @media only screen and (min-width: $breakpoint-l) { @content ; }
+  }
+  @else if $bp == m {
+    @media only screen and (min-width: $breakpoint-m) { @content ; }
+  }
+  @else if $bp == s {
+    @media only screen and (min-width: $breakpoint-s) { @content ; }
+  }
+}
+
+// Media Breakpoint - max
+@mixin upto-breakpoint($bp) {
+  @if $bp == xl {
+    @media only screen and (max-width: $breakpoint-xl - 1) { @content ; }
+  }
+  @else if $bp == l {
+    @media only screen and (max-width: $breakpoint-l - 1) { @content ; }
+  }
+  @else if $bp == m {
+    @media only screen and (max-width: $breakpoint-m - 1) { @content ; }
+  }
+  @else if $bp == s {
+    @media only screen and (max-width: $breakpoint-s - 1) { @content ; }
+  }
+}
+
+// Media Breakpoint - min and max
+@mixin between-breakpoint($bp-from, $bp-to) {
+  @media only screen and (min-width: $bp-from) and (max-width: $bp-to - 1) { @content ; }
+}
