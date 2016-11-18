@@ -7,16 +7,12 @@ Basic sass files with simple grid system
 
 are required, the rest is optional.
 
+Grid example <br>
 
-Grid example
-
-<pre>
-<div class="container">
-  <div class="row clear-ml-3"
-    <div class="col-12 col-6-m col-4-l"></div>
-  </div>
-</div>
-</pre>
-
+`<div class="container">` <br>
+&nbsp;&nbsp;`  <div class="row clear-ml-3">` <br>
+&nbsp;&nbsp;&nbsp;&nbsp;`    <div class="col-12 col-6-m col-4-l"></div>` <br>
+&nbsp;&nbsp;`  </div>` <br>
+`</div>` <br>
 
 There's helper classes in _helpers.scss including .island classes.
