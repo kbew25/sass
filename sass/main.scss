@@ -5,27 +5,24 @@
 @import "utils/reset";
 @import "base/colors";
 
+
 @import "utils/vars";
 @import "utils/grid";
 @import "utils/helpers";
+
 
 @import "base/typography";
 @import "base/buttons";
 @import "base/forms";
 
-/**
-* Optional Folders:
-* ~/components
-* ~/layout
-* ~/pages
-*
-*/
 
 //@import "components/videos";
+
 
 //@import "layout/header";
 //@import "layout/main";
 //@import "layout/footer";
+
 
 //@import "pages/front";
 //@import "pages/basic";
@@ -35,12 +32,14 @@
 .grid-boxes > div {
   min-height: 20px;
   margin-bottom: 10px;
-  border-radius: 3px;
-  border: 1px solid $gray;
   padding: 20px;
+  border: 1px solid $gray;
+  border-radius: 3px;
 }
 
 .sg-title {
-  color: #567567;
+  padding: 20px;
   text-decoration: underline;
+  color: #567567;
+  background: #ccc;
 }

@@ -15,4 +15,6 @@ Grid example <br>
 &nbsp;&nbsp;`  </div>` <br>
 `</div>` <br>
 
-There's helper classes in _helpers.scss including .island classes.
+There's helper classes in _helpers.scss including .island classes. <br>
+
+Run: `npm install`

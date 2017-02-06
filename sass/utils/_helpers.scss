@@ -201,6 +201,11 @@
 .float-left {
   float: left !important;
 }
+.block-center {
+  float: none !important;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 // Tablet Helpers
 @include breakpoint(m) {
