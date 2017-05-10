@@ -1,0 +1,54 @@
+// ----------------------------------------------
+//                Buttons
+// ----------------------------------------------
+
+//-- Buttons
+@mixin buttons() {
+  padding: 10px 1.2em;
+  cursor: pointer;
+  border: none;
+  font-size: $font-size-base;
+  display: inline-block;
+  text-align: center;
+  font-weight: 500;
+  font-family: $font-family-sans;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+//-- Button Color
+@mixin button($btncolor) {
+  background: $btncolor;
+  transition: background 0.2s ease;
+  // if hover is dark use light text
+  @if lightness($btncolor) < 75% {
+    color: white;
+  } @else {
+    color: darken($btncolor, 60%);
+  }
+
+  &:hover {
+    background: darken($btncolor, 10%);
+    transition: background 0.2s ease;
+  }
+}
+
+%buttons {
+  @include buttons;
+}
+
+.btn {
+  @extend %buttons;
+  min-width: 180px;
+}
+
+.btn-primary {
+  @include button(#444);
+}
+
+.btn-secondary {
+  @include button($quincolor);
+  color: $pcolor;
+}

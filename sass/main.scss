@@ -1,45 +1,55 @@
 // ----------------------------------------------
 //                Main SCSS
 // ----------------------------------------------
-
-@import "utils/reset";
-@import "base/colors";
-
-
-@import "utils/vars";
-@import "utils/grid";
-@import "utils/helpers";
+//-- Abstracts
+@import "abstracts/variables";  // Variables
+@import "abstracts/mixins";     // Mixins
+@import "abstracts/helpers";    // Helper classes
 
 
-@import "base/typography";
-@import "base/buttons";
-@import "base/forms";
+//-- Base
+@import "base/reset";           // Reset
+@import "base/typography";      // Typography
 
 
-//@import "components/videos";
+//-- Components
+@import "components/buttons";   // Buttons
+@import "components/forms";     // Forms elements
+//@import "components/videos";  // Videos
 
 
-//@import "layout/header";
-//@import "layout/main";
-//@import "layout/footer";
+//-- Layout
+@import "layout/grid";          // Grid system
+//@import "layout/header";      // Header
+//@import "layout/nav";         // Navigation
+//@import "layout/sidebar";     // Sidebars
+//@import "layout/footer";      // Footer
 
 
-//@import "pages/front";
-//@import "pages/basic";
+//-- Pages
+//@import "pages/front";        // Frontpage
+//@import "pages/basic";        // Basic Page
+/* This all can be deleted when theming starts */
 
-
-// Styleguide page - Delete me!
-.grid-boxes > div {
-  min-height: 20px;
-  margin-bottom: 10px;
-  padding: 20px;
-  border: 1px solid $gray;
-  border-radius: 3px;
+body.sidebar-second #main {
+  width: 72%;
+  float: left;
+}
+body.sidebar-second #sidebar-second {
+  width: 25%;
+  float: right;
 }
 
-.sg-title {
-  padding: 20px;
-  text-decoration: underline;
-  color: #567567;
-  background: #ccc;
+body {
+  background: #543543;
+}
+
+.region {
+  background: #eee;
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto !important;
 }
