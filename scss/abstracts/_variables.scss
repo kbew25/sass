@@ -1,0 +1,97 @@
+/**
+ * @file
+ * Variables.
+ */
+
+// --------------- Colors ----------------- //
+
+//-- Theme colors
+$pcolor:                       #2c3946; // primary
+$scolor:                       #ffb513; // secondary
+$tcolor:                       #7dd5e0; // tertiary
+$quatcolor:                    #f9874f; // quaternary
+$quincolor:                    #39606f; // quinary
+$sencolor:                     #b2e091; // senary
+$sepcolor:                     #000; // septenary
+$octcolor:                     #000; // octonary
+$noncolor:                     #000; // nonary
+$dencolor:                     #000; // denary
+
+
+//-- Grayscale colors
+$white:                        #fff;
+$dark-gray:                    #5f5f5f;
+$gray:                         #979797;
+$light-gray:                   #d8d8d8;
+$dark:                         #000;
+
+$body-text:                    $dark;
+
+// --------------- Fonts ----------------- //
+
+$font-size-base:               16px; // Mobile
+$font-size-base-l:             18px; // Desktop
+
+@function em($pixels, $context: $font-size-base) {
+  @return #{$pixels/$context}em;
+}
+
+@function rem($pixels, $context: $font-size-base) {
+  @return #{$pixels/$context}rem;
+}
+
+//--  Font family
+$font-family-sans:             sans-serif;
+$font-family-serif:            serif;
+
+$font-family-base:             $font-family-sans;
+$font-family-headings:         $font-family-sans;
+
+//--  Font size
+$font-size-h1:                 em($font-size-base + 10);
+$font-size-h2:                 em($font-size-base + 8);
+$font-size-h3:                 em($font-size-base + 6);
+$font-size-h4:                 em($font-size-base + 4);
+$font-size-h5:                 em($font-size-base + 2);
+$font-size-h6:                 em($font-size-base);
+
+$font-size-large:              em($font-size-base + 2);
+
+// $font-sizes: (
+//   h1: (
+//     normal: $font-size-h1,
+//     small: $font-size-h1-small
+//   ),
+//   h2: (
+//     normal: $font-size-h2,
+//     small: $font-size-h2-small
+//   ),
+//   label: (
+//     normal: $font-size-label,
+//     small: $font-size-label-small
+//   )
+// );
+
+// --------------- Grid ----------------- //
+
+//-- Responsive Breakpoints - Mobile first
+$breakpoint-s:                 501px !default;
+$breakpoint-m:                 768px !default;
+$breakpoint-l:                 1025px !default;
+$breakpoint-xl:                1280px !default;
+
+//-- Grid Containers
+$container:                    100% !default;
+$container-max-width:          1400px !default;
+
+//-- Grid Gutters
+$grid-gutter:                  20px !default;
+$grid-gutter-l:                40px !default;
+
+$island:                       $grid-gutter;
+$island-top:                   $island;
+$island-bottom:                $island;
+$island-top-half:              $island/2;
+$island-bottom-half:           $island/2;
+$island-top-double:            $grid-gutter-l;
+$island-bottom-double:         $grid-gutter-l;

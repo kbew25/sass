@@ -1,0 +1,61 @@
+/**
+ * @file
+ * Form elements.
+ */
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+textarea,
+select {
+  display: inline-block;
+  width: 100%;
+  margin: 0.5em 0;
+  padding: rem(10px) $island;
+  background-color: $white;
+  border: 1px solid $gray;
+  border-radius: 0;
+  font-size: 1em;
+  line-height: 1em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &::placeholder {
+    color: $gray;
+  }
+}
+
+.form-actions input[type="submit"] {
+  border-radius: 0;
+  border: none;
+  -webkit-appearance: none;
+  background: $tcolor;
+  font-weight: bold;
+  font-size: rem(20px);
+  padding: em(10px) $island;
+  margin-top: 1em;
+
+  &:hover {
+    background: $scolor;
+  }
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: 1px solid $scolor;
+  outline-offset: -1px;
+}
+
+form {
+  .form-item {
+    margin-bottom: $grid-gutter;
+  }
+
+  .description {
+    color: $gray;
+    font-size: 0.8em;
+  }
+}

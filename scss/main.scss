@@ -1,0 +1,33 @@
+/**
+ * @file
+ * Main scss file.
+ *
+ * Import partials into this file and it will compile to dist/css.
+ */
+
+//-- Abstracts
+@import "abstracts/globals"; // Globals
+@import "abstracts/variables"; // Variables
+// @import "abstracts/functions"; // Functions
+@import "abstracts/mixins"; // Mixins
+// @import "abstracts/helpers"; // Helpers
+
+//-- Base
+// @import "base/reset"; // Normalize
+@import "base/typography"; // Typography
+
+//-- Components
+@import "components/buttons"; // Buttons
+@import "components/forms"; // Forms elements
+// @import "components/videos"; // Videos
+
+//-- Layout
+// @import "layout/grid"; // Grid system
+// @import "layout/header"; // Header
+// @import "layout/nav"; // Navigation
+// @import "layout/sidebar"; // Sidebars
+// @import "layout/main"; // Main
+// @import "layout/footer"; // Footer
+
+//-- Pages
+// @import "pages/front"; // Frontpage

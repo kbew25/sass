@@ -1,0 +1,184 @@
+/**
+ * @file
+ * Helpers.
+ */
+
+// Text align
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+
+.clear {
+  clear: both;
+}
+
+.clear-right {
+  clear: right;
+}
+
+.clear-left {
+  clear: left;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+// Display Types
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-inline-block {
+  display: inline-block;
+}
+
+.display-inline {
+  display: inline;
+}
+
+.float-right {
+  float: right !important;
+}
+
+.float-left {
+  float: left !important;
+}
+
+.block-center {
+  float: none !important;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Tablet Helpers
+@include breakpoint(m) {
+  // Display Types
+  .none-m {
+    display: none;
+  }
+
+  .block-m {
+    display: block;
+  }
+
+  .inline-block-m {
+    display: inline-block;
+  }
+
+  .inline-m {
+    display: inline;
+  }
+}
+
+// Desktop Helpers
+@include breakpoint(l) {
+  // Display Types
+  .none-l {
+    display: none;
+  }
+
+  .block-l {
+    display: block;
+  }
+
+  .inline-block-l {
+    display: inline-block;
+  }
+
+  .inline-l {
+    display: inline;
+  }
+}
+
+// HD Helpers
+@include breakpoint(xl) {
+  // Display Types
+  .none-xl {
+    display: none;
+  }
+
+  .block-xl {
+    display: block;
+  }
+
+  .inline-block-xl {
+    display: inline-block;
+  }
+
+  .inline-xl {
+    display: inline;
+  }
+}
+
+//-- Backgrounds Colors | .bg-pcolor
+.bg {
+  // Theme Colors
+  &-pcolor {
+    background-color: $pcolor;
+  }
+  &-scolor {
+    background-color: $scolor;
+  }
+  &-tcolor {
+    background-color: $tcolor;
+  }
+  &-quatcolor {
+    background-color: $quatcolor;
+  }
+  &-quincolor {
+    background-color: $quincolor;
+  }
+  &-sencolor {
+    background-color: $sencolor;
+  }
+  &-sepcolor {
+    background-color: $sepcolor;
+  }
+  &-octcolor {
+    background-color: $octcolor;
+  }
+  &-noncolor {
+    background-color: $noncolor;
+  }
+  &-dencolor {
+    background-color: $dencolor;
+  }
+  // Greyscale
+  &-dark {
+    background-color: $dark;
+  }
+  &-dark-gray {
+    background-color: $dark-gray;
+  }
+  &-gray {
+    background-color: $gray;
+  }
+  &-light-gray {
+    background-color: $light-gray;
+  }
+  &-white {
+    background-color: $white;
+  }
+}

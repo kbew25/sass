@@ -1,0 +1,91 @@
+/**
+ * @file
+ * Buttons.
+ */
+
+//--- Button colors.
+$button-colors: (
+  primary: (
+    bg: $pcolor,
+    color: $white,
+    hover-bg: $quincolor,
+    hover-color: $white,
+  ),
+  secondary: (
+    bg: $scolor,
+    color: $white,
+    hover-bg: darken($scolor, 5%),
+    hover-color: $white,
+  ),
+  tertiary: (
+    bg: $tcolor,
+    color: $quincolor,
+    hover-bg: lighten($tcolor, 49%),
+    hover-color: $quincolor,
+    border: $quincolor,
+  ),
+  disabled: (
+    bg: $gray,
+    color: $white,
+    hover-bg: $gray,
+    hover-color: $white,
+  ),
+);
+
+//--- Buttons.
+@mixin buttons() {
+  display: inline-block;
+  padding: em(10px) em(30px);
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  font-weight: bold;
+  line-height: 1.5;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// e.g. @include buttonType(primary).
+@mixin buttonType($type) {
+  background: map-get(map-get($button-colors, $type), bg);
+  color: map-get(map-get($button-colors, $type), color);
+
+  &:hover {
+    background: map-get(map-get($button-colors, $type), hover-bg);
+    color: map-get(map-get($button-colors, $type), hover-color);
+  }
+
+  @if $type != 'primary' {
+    transition: background 0.2s ease;
+  }
+}
+
+.btn {
+  @include buttons;
+
+  &-small {
+    padding: em(6px) em(12px);
+  }
+
+  &-large {
+    padding: 1em em(50px);
+  }
+}
+
+.btn-primary {
+  @include buttonType(primary);
+}
+
+.btn-secondary {
+  @include buttonType(secondary);
+}
+
+.btn-tertiary {
+  @include buttonType(tertiary);
+}
+
+.btn-disabled {
+  @include buttonType(disabled);
+}

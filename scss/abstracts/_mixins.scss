@@ -1,0 +1,193 @@
+/**
+ * @file
+ * Mixins.
+ */
+
+//----- Breakpoints
+
+//-- min-width
+@mixin breakpoint($bp) {
+  @if $bp == xl {
+    @media only screen and (min-width: $breakpoint-xl) { @content ; }
+  } @else if $bp == l {
+    @media only screen and (min-width: $breakpoint-l) { @content ; }
+  } @else if $bp == m {
+    @media only screen and (min-width: $breakpoint-m) { @content ; }
+  } @else if $bp == s {
+    @media only screen and (min-width: $breakpoint-s) { @content ; }
+  } @else {
+    @media only screen and (min-width: $bp) { @content ; }
+  }
+}
+
+//-- max-width
+@mixin upto-breakpoint($bp) {
+  @if $bp == xl {
+    @media only screen and (max-width: $breakpoint-xl - 1) { @content ; }
+  } @else if $bp == l {
+    @media only screen and (max-width: $breakpoint-l - 1) { @content ; }
+  } @else if $bp == m {
+    @media only screen and (max-width: $breakpoint-m - 1) { @content ; }
+  } @else if $bp == s {
+    @media only screen and (max-width: $breakpoint-s - 1) { @content ; }
+  } @else {
+    @media only screen and (max-width: $bp - 1) { @content ; }
+  }
+}
+
+//-- min and max-width
+@mixin between-breakpoint($bp-from, $bp-to) {
+  @media only screen and (min-width: $bp-from) and (max-width: $bp-to - 1) { @content; }
+}
+
+//----- Font smoothing
+@mixin font-smoothing($value: antialiased) {
+  @if $value == antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  } @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+//----- Vertical Align
+@mixin vertical-align() {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+//------ Center align
+@mixin center-align() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+//----- .visually-hidden class.
+@mixin visually-hidden() {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+}
+
+//----- Font sizes
+// @mixin font-size($var, $mobile: true) {
+//   $normal: map-get(map-get($font-sizes, $var), normal);
+//   $small: map-get(map-get($font-sizes, $var), small);
+//
+//   font-size: $normal;
+//
+//   @if $mobile == true {
+//     @include upto-breakpoint(s){
+//       font-size: $small;
+//     }
+//   }
+// }
+
+@mixin hideupto($bp) {
+  @include upto-breakpoint($bp) {
+    display: none;
+  }
+}
+
+@mixin hidefrom($bp) {
+  @include breakpoint($bp) {
+    display: none;
+  }
+}
+
+@mixin print-hide() {
+  @media print {
+    display: none !important;
+  }
+}
+
+// Check contrast ratio of color to background color.
+// @mixin contrast($bg-color, $light-color: $white, $dark-color: $dark-gray) {
+//   background: $bg-color;
+//
+//   // Check light contrast.
+//   @if contrast_ratio($light-color, $bg-color) >= 4.5 {
+//     color: $light-color;
+//   }
+//   // Check dark contrast.
+//   @elseif contrast_ratio($dark-color, $bg-color) > 4.5 {
+//     color: $dark-color;
+//   }
+//   // If both fail then return darkest.
+//   @else {
+//     color: $dark;
+//   }
+// }
+
+//----- Island
+// @mixin island($property: 'padding', $size: 'none') {
+//   @if $size == half {
+//     #{$property}-top: $island-top-half;
+//     #{$property}-bottom: $island-bottom-half;
+//   }
+//   @else {
+//     #{$property}-top: $island-top;
+//     #{$property}-bottom: $island-bottom;
+//   }
+//
+//   @if $size == double {
+//     #{$property}-top: $island-top-double/2;
+//     #{$property}-bottom: $island-bottom-double/2;
+//
+//     @include breakpoint(m) {
+//       #{$property}-top: $island-top-double;
+//       #{$property}-bottom: $island-bottom-double;
+//     }
+//   }
+// }
+//
+// //----- Island top
+// @mixin island-top($property: 'padding', $size: 'none') {
+//   @if $size == half {
+//     #{$property}-top: $island-top-half;
+//   }
+//   @else {
+//     #{$property}-top: $island-top;
+//   }
+//
+//   @if $size == double {
+//     #{$property}-top: $island-top-double/2;
+//
+//     @include breakpoint(m) {
+//       #{$property}-top: $island-top-double;
+//     }
+//   }
+// }
+//
+// //----- Island bottom
+// @mixin island-bottom($property: 'padding', $size: 'none') {
+//   @if $size == half {
+//     #{$property}-bottom: $island-bottom-half;
+//   }
+//   @else {
+//     #{$property}-bottom: $island-bottom;
+//   }
+//
+//   @if $size == double {
+//     #{$property}-bottom: $island-bottom-double/2;
+//
+//     @include breakpoint(m) {
+//       #{$property}-bottom: $island-bottom-double;
+//     }
+//   }
+// }

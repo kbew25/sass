@@ -1,0 +1,224 @@
+/**
+ * @file
+ * Main scss file.
+ *
+ * Import partials into this file and it will compile to dist/css.
+ */
+/**
+ * @file
+ * Globals.
+ */
+* {
+  box-sizing: border-box; }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto !important; }
+
+/**
+ * @file
+ * Variables.
+ */
+/**
+ * @file
+ * Mixins.
+ */
+/**
+ * @file
+ * Typography.
+ */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #000;
+  line-height: 1.5; }
+  @media only screen and (min-width: 1025px) {
+    body {
+      font-size: 18px; } }
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 0.5em;
+  margin-bottom: 20px;
+  font-weight: 900; }
+  h1 a, .h1 a,
+  h2 a, .h2 a,
+  h3 a, .h3 a,
+  h4 a, .h4 a,
+  h5 a, .h5 a,
+  h6 a, .h6 a {
+    color: inherit; }
+
+h1, .h1 {
+  font-size: 2.5em;
+  line-height: 1;
+  margin-top: 0;
+  margin-bottom: 1em; }
+
+h2, .h2 {
+  font-size: 2em;
+  line-height: 1.125; }
+
+h3, .h3 {
+  font-size: 1.5em;
+  line-height: 1.25; }
+
+h4, .h4 {
+  font-size: 1.25em;
+  line-height: 1.2; }
+
+h5, .h5,
+h6, .h6 {
+  font-size: 1em; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold; }
+  a:hover {
+    color: inherit; }
+  a:active {
+    color: inherit; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em; }
+  p:last-child {
+    margin-bottom: 0; }
+
+blockquote {
+  font-size: 1.75em;
+  line-height: 1.28; }
+
+/**
+ * @file
+ * Buttons.
+ */
+.btn {
+  display: inline-block;
+  padding: 0.625em 1.875em;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  font-weight: bold;
+  line-height: 1.5; }
+  .btn:hover {
+    text-decoration: none; }
+  .btn-small {
+    padding: 0.375em 0.75em; }
+  .btn-large {
+    padding: 1em 3.125em; }
+
+.btn-primary {
+  background: #2c3946;
+  color: #fff; }
+  .btn-primary:hover {
+    background: #39606f;
+    color: #fff; }
+
+.btn-secondary {
+  background: #ffb513;
+  color: #fff;
+  transition: background 0.2s ease; }
+  .btn-secondary:hover {
+    background: #f9ab00;
+    color: #fff; }
+
+.btn-tertiary {
+  background: #7dd5e0;
+  color: #39606f;
+  transition: background 0.2s ease; }
+  .btn-tertiary:hover {
+    background: white;
+    color: #39606f; }
+
+.btn-disabled {
+  background: #979797;
+  color: #fff;
+  transition: background 0.2s ease; }
+  .btn-disabled:hover {
+    background: #979797;
+    color: #fff; }
+
+/**
+ * @file
+ * Form elements.
+ */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+textarea,
+select {
+  display: inline-block;
+  width: 100%;
+  margin: 0.5em 0;
+  padding: 0.625rem 20px;
+  background-color: #fff;
+  border: 1px solid #979797;
+  border-radius: 0;
+  font-size: 1em;
+  line-height: 1em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+  input[type="text"]::-webkit-input-placeholder,
+  input[type="email"]::-webkit-input-placeholder,
+  input[type="password"]::-webkit-input-placeholder,
+  input[type="tel"]::-webkit-input-placeholder,
+  input[type="url"]::-webkit-input-placeholder,
+  input[type="search"]::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder,
+  select::-webkit-input-placeholder {
+    color: #979797; }
+  input[type="text"]:-ms-input-placeholder,
+  input[type="email"]:-ms-input-placeholder,
+  input[type="password"]:-ms-input-placeholder,
+  input[type="tel"]:-ms-input-placeholder,
+  input[type="url"]:-ms-input-placeholder,
+  input[type="search"]:-ms-input-placeholder,
+  textarea:-ms-input-placeholder,
+  select:-ms-input-placeholder {
+    color: #979797; }
+  input[type="text"]::placeholder,
+  input[type="email"]::placeholder,
+  input[type="password"]::placeholder,
+  input[type="tel"]::placeholder,
+  input[type="url"]::placeholder,
+  input[type="search"]::placeholder,
+  textarea::placeholder,
+  select::placeholder {
+    color: #979797; }
+
+.form-actions input[type="submit"] {
+  border-radius: 0;
+  border: none;
+  -webkit-appearance: none;
+  background: #7dd5e0;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 0.625em 20px;
+  margin-top: 1em; }
+  .form-actions input[type="submit"]:hover {
+    background: #ffb513; }
+
+input:focus, textarea:focus, select:focus {
+  outline: 1px solid #ffb513;
+  outline-offset: -1px; }
+
+form .form-item {
+  margin-bottom: 20px; }
+
+form .description {
+  color: #979797;
+  font-size: 0.8em; }
+/*# sourceMappingURL=main.css.map */
