@@ -20,9 +20,8 @@ $button-colors: (
   tertiary: (
     bg: $tcolor,
     color: $quincolor,
-    hover-bg: lighten($tcolor, 49%),
+    hover-bg: lighten($tcolor, 5%),
     hover-color: $quincolor,
-    border: $quincolor,
   ),
   disabled: (
     bg: $gray,

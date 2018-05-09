@@ -1,12 +1,12 @@
-// ----------------------------------------------
-//                Functions
-// ----------------------------------------------
+/**
+ * @file
+ * Functions.
+ */
 
 /*
  * Color contrast ratio functions
  * via https://gist.github.com/voxpelli/6304812
 */
-
 @function gcd($a, $b) {
   @if ($b != 0) {
     @return gcd($b, $a % $b);

@@ -136,7 +136,7 @@ blockquote {
   color: #39606f;
   transition: background 0.2s ease; }
   .btn-tertiary:hover {
-    background: white;
+    background: #92dce5;
     color: #39606f; }
 
 .btn-disabled {
