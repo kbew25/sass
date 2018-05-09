@@ -1,6 +1,7 @@
-// ----------------------------------------------
-//                Helpers
-// ----------------------------------------------
+/**
+ * @file
+ * Helpers.
+ */
 
 // Text align
 .text-center {
@@ -125,16 +126,10 @@
   .inline-block-xl {
     display: inline-block;
   }
-  
+
   .inline-xl {
     display: inline;
   }
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto !important;
 }
 
 //-- Backgrounds Colors | .bg-pcolor

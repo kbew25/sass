@@ -1,3 +1,17 @@
-(function($) {
+/**
+ * @file
+ * Main theme js.
+ *
+ * This file will compile into dist/js.
+ */
 
-}(jQuery))
+(function ($) {
+  'use strict';
+
+  // Drupal.behaviors.BEHAVIOUR = {
+  //   attach: function (context, settings) {
+  //     // Code.
+  //   }
+  // };
+
+}(jQuery));

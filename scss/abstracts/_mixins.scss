@@ -1,6 +1,7 @@
-// ----------------------------------------------
-//                Mixins
-// ----------------------------------------------
+/**
+ * @file
+ * Mixins.
+ */
 
 //----- Breakpoints
 
@@ -14,6 +15,8 @@
     @media only screen and (min-width: $breakpoint-m) { @content ; }
   } @else if $bp == s {
     @media only screen and (min-width: $breakpoint-s) { @content ; }
+  } @else {
+    @media only screen and (min-width: $bp) { @content ; }
   }
 }
 
@@ -27,14 +30,15 @@
     @media only screen and (max-width: $breakpoint-m - 1) { @content ; }
   } @else if $bp == s {
     @media only screen and (max-width: $breakpoint-s - 1) { @content ; }
+  } @else {
+    @media only screen and (max-width: $bp - 1) { @content ; }
   }
 }
 
 //-- min and max-width
 @mixin between-breakpoint($bp-from, $bp-to) {
-  @media only screen and (min-width: $bp-from) and (max-width: $bp-to - 1) { @content ; }
+  @media only screen and (min-width: $bp-from) and (max-width: $bp-to - 1) { @content; }
 }
-
 
 //----- Font smoothing
 @mixin font-smoothing($value: antialiased) {
@@ -47,22 +51,107 @@
   }
 }
 
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
 
-// //----- Island
+//----- Vertical Align
+@mixin vertical-align() {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+//------ Center align
+@mixin center-align() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+//----- .visually-hidden class.
+@mixin visually-hidden() {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+}
+
+//----- Font sizes
+// @mixin font-size($var, $mobile: true) {
+//   $normal: map-get(map-get($font-sizes, $var), normal);
+//   $small: map-get(map-get($font-sizes, $var), small);
+//
+//   font-size: $normal;
+//
+//   @if $mobile == true {
+//     @include upto-breakpoint(s){
+//       font-size: $small;
+//     }
+//   }
+// }
+
+@mixin hideupto($bp) {
+  @include upto-breakpoint($bp) {
+    display: none;
+  }
+}
+
+@mixin hidefrom($bp) {
+  @include breakpoint($bp) {
+    display: none;
+  }
+}
+
+@mixin print-hide() {
+  @media print {
+    display: none !important;
+  }
+}
+
+// Check contrast ratio of color to background color.
+// @mixin contrast($bg-color, $light-color: $white, $dark-color: $dark-gray) {
+//   background: $bg-color;
+//
+//   // Check light contrast.
+//   @if contrast_ratio($light-color, $bg-color) >= 4.5 {
+//     color: $light-color;
+//   }
+//   // Check dark contrast.
+//   @elseif contrast_ratio($dark-color, $bg-color) > 4.5 {
+//     color: $dark-color;
+//   }
+//   // If both fail then return darkest.
+//   @else {
+//     color: $dark;
+//   }
+// }
+
+//----- Island
 // @mixin island($property: 'padding', $size: 'none') {
 //   @if $size == half {
-//     #{$property}-top: $grid-gutter/2;
-//     #{$property}-bottom: $grid-gutter/2;
+//     #{$property}-top: $island-top-half;
+//     #{$property}-bottom: $island-bottom-half;
 //   }
 //   @else {
-//     #{$property}-top: $grid-gutter;
-//     #{$property}-bottom: $grid-gutter;
+//     #{$property}-top: $island-top;
+//     #{$property}-bottom: $island-bottom;
 //   }
 //
 //   @if $size == double {
+//     #{$property}-top: $island-top-double/2;
+//     #{$property}-bottom: $island-bottom-double/2;
+//
 //     @include breakpoint(m) {
-//       #{$property}-top: $grid-gutter-l;
-//       #{$property}-bottom: $grid-gutter-l;
+//       #{$property}-top: $island-top-double;
+//       #{$property}-bottom: $island-bottom-double;
 //     }
 //   }
 // }
@@ -70,15 +159,17 @@
 // //----- Island top
 // @mixin island-top($property: 'padding', $size: 'none') {
 //   @if $size == half {
-//     #{$property}-top: $grid-gutter/2;
+//     #{$property}-top: $island-top-half;
 //   }
 //   @else {
-//     #{$property}-top: $grid-gutter;
+//     #{$property}-top: $island-top;
 //   }
 //
 //   @if $size == double {
+//     #{$property}-top: $island-top-double/2;
+//
 //     @include breakpoint(m) {
-//       #{$property}-top: $grid-gutter-l;
+//       #{$property}-top: $island-top-double;
 //     }
 //   }
 // }
@@ -86,15 +177,17 @@
 // //----- Island bottom
 // @mixin island-bottom($property: 'padding', $size: 'none') {
 //   @if $size == half {
-//     #{$property}-bottom: $grid-gutter/2;
+//     #{$property}-bottom: $island-bottom-half;
 //   }
 //   @else {
-//     #{$property}-bottom: $grid-gutter;
+//     #{$property}-bottom: $island-bottom;
 //   }
 //
 //   @if $size == double {
+//     #{$property}-bottom: $island-bottom-double/2;
+//
 //     @include breakpoint(m) {
-//       #{$property}-bottom: $grid-gutter-l;
+//       #{$property}-bottom: $island-bottom-double;
 //     }
 //   }
 // }

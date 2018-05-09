@@ -1,23 +1,34 @@
 {
-  "name": "sass",
+  "name": "custom",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Kirsty Bewley",
+  "author": "",
   "license": "ISC",
+  "config": {
+    "scssPath": "./scss",
+    "jsPath": "./js",
+    "outputCss": "./dist/css",
+    "outputJs": "./dist/js",
+    "proxy": "http://local.dev"
+  },
+  "scripts": {
+    "browser-sync": "browser-sync start --proxy $npm_package_config_proxy --files $npm_package_config_outputCss",
+    "autoprefixer": "postcss -u autoprefixer -r $npm_package_config_outputCss/*.css",
+    "scss": "node-sass $npm_package_config_scssPath --source-map true --output-style nested -o $npm_package_config_outputCss",
+    "build:js": "uglifyjs -- $npm_package_config_jsPath/main.js > $npm_package_config_outputJs/main.js",
+    "build:css": "npm run scss && npm run autoprefixer",
+    "rminfo": "find node_modules/ -name '*.info' -type f -delete",
+    "watch:css": "onchange $npm_package_config_scssPath -v -- npm-run-all -p build:css",
+    "dev": "npm run build:js && npm-run-all -p browser-sync watch:css"
+  },
   "devDependencies": {
-    "browser-sync": "^2.18.1",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-clean-css": "^2.0.13",
-    "gulp-compass": "^2.1.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-notify": "^2.2.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^2.0.0"
+    "autoprefixer": "^6.3.6",
+    "browser-sync": "^2.24.1",
+    "node-sass": "^3.7.0",
+    "npm-run-all": "^2.1.1",
+    "onchange": "^2.4.0",
+    "postcss-cli": "^2.5.2",
+    "uglify-js": "^3.1.3"
   }
 }

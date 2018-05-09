@@ -1,55 +1,33 @@
-// ----------------------------------------------
-//                Main SCSS
-// ----------------------------------------------
-//-- Abstracts
-@import "abstracts/variables";  // Variables
-@import "abstracts/mixins";     // Mixins
-@import "abstracts/helpers";    // Helper classes
+/**
+ * @file
+ * Main scss file.
+ *
+ * Import partials into this file and it will compile to dist/css.
+ */
 
+//-- Abstracts
+@import "abstracts/globals"; // Globals
+@import "abstracts/variables"; // Variables
+// @import "abstracts/functions"; // Functions
+@import "abstracts/mixins"; // Mixins
+// @import "abstracts/helpers"; // Helpers
 
 //-- Base
-@import "base/reset";           // Reset
-@import "base/typography";      // Typography
-
+// @import "base/reset"; // Normalize
+@import "base/typography"; // Typography
 
 //-- Components
-@import "components/buttons";   // Buttons
-@import "components/forms";     // Forms elements
-//@import "components/videos";  // Videos
-
+@import "components/buttons"; // Buttons
+@import "components/forms"; // Forms elements
+// @import "components/videos"; // Videos
 
 //-- Layout
-@import "layout/grid";          // Grid system
-//@import "layout/header";      // Header
-//@import "layout/nav";         // Navigation
-//@import "layout/sidebar";     // Sidebars
-//@import "layout/footer";      // Footer
-
+// @import "layout/grid"; // Grid system
+// @import "layout/header"; // Header
+// @import "layout/nav"; // Navigation
+// @import "layout/sidebar"; // Sidebars
+// @import "layout/main"; // Main
+// @import "layout/footer"; // Footer
 
 //-- Pages
-//@import "pages/front";        // Frontpage
-//@import "pages/basic";        // Basic Page
-/* This all can be deleted when theming starts */
-
-body.sidebar-second #main {
-  width: 72%;
-  float: left;
-}
-body.sidebar-second #sidebar-second {
-  width: 25%;
-  float: right;
-}
-
-body {
-  background: #543543;
-}
-
-.region {
-  background: #eee;
-  margin-bottom: 20px;
-}
-
-img {
-  max-width: 100%;
-  height: auto !important;
-}
+// @import "pages/front"; // Frontpage
