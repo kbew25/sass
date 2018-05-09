@@ -2,9 +2,7 @@
 //        Mobile First Grid - Mixin & classes
 // ----------------------------------------------
 
-* {
-  box-sizing: border-box;
-}
+$columns: 12;
 
 //----- Mixins
 
@@ -43,31 +41,12 @@
 }
 
 // Columns
-@mixin col($i, $cols: $columns, $size: 'null') {
+@mixin col($i, $cols: $columns) {
   position: relative;
   float: left;
   width: ($i / $cols) * 100%;
-
-  @if $size == 's'  {
-    padding-right: $grid-gutter-s;
-    padding-left: $grid-gutter-s;
-  }
-  @else if $size == 'm'  {
-    padding-right: $grid-gutter-m;
-    padding-left: $grid-gutter-m;
-  }
-  @else if $size == 'l' {
-    padding-right: $grid-gutter-l;
-    padding-left: $grid-gutter-l;
-  }
-  @else if $size == 'xl' {
-    padding-right: $grid-gutter-xl;
-    padding-left: $grid-gutter-xl;
-  }
-  @else {
-    padding-right: $grid-gutter;
-    padding-left: $grid-gutter;
-  }
+  padding-right: $grid-gutter;
+  padding-left: $grid-gutter;
 }
 
 
@@ -94,36 +73,36 @@
 
 // Small Grid
 @include breakpoint(s) {
-  @for $i from 1 through $columns-s {
+  @for $i from 1 through $columns {
     .col-#{$i}-s {
-      @include col($i, $size: 's');
+      @include col($i);
     }
   }
 }
 
 // Medium Grid
 @include breakpoint(m) {
-  @for $i from 1 through $columns-m {
+  @for $i from 1 through $columns {
     .col-#{$i}-m {
-      @include col($i, $size: 'm');
+      @include col($i);
     }
   }
 }
 
 // Large Grid
 @include breakpoint(l) {
-  @for $i from 1 through $columns-l {
+  @for $i from 1 through $columns {
     .col-#{$i}-l {
-      @include col($i, $size: 'l');
+      @include col($i);
     }
   }
 }
 
 // Extra Large Grid
 @include breakpoint(xl) {
-  @for $i from 1 through $columns-xl {
+  @for $i from 1 through $columns {
     .col-#{$i}-xl {
-      @include col($i, $size: 'xl');
+      @include col($i);
     }
   }
 }

@@ -8,6 +8,25 @@
   <link href="dist/css/main.css" rel="stylesheet" type="text/css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="dist/js/main.js"></script>
+  <style>
+    .island {
+      padding: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+    .sg-title {
+      font-size: 1em;
+      color: #999;
+      margin: 0 0 20px;
+    }
+    form div {
+      margin-bottom: 10px;
+    }
+    .grid-item {
+      background: #ccc;
+      padding: 10px;
+      border: 1px solid #fff;
+    }
+  </style>
 </head>
 
 <body>
@@ -30,6 +49,17 @@
       <h3>Heading 3 with a paragraph</h3>
       <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Cras ultricies ligula sed magna dictum porta. Pellentesque in ipsum id orci porta dapibus. Curabitur aliquet quam id dui posuere blandit. Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada.</p>
       <h4>Heading 4 with a paragraph</h4>
+      <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Cras ultricies ligula sed magna dictum porta. Pellentesque in ipsum id orci porta dapibus. Curabitur aliquet quam id dui posuere blandit. Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada.</p>
+
+      <p><strong>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Donec rutrum congue leo eget malesuada. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus.</strong></p>
+      <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Cras ultricies ligula sed magna dictum porta. Pellentesque in ipsum id orci porta dapibus. Curabitur aliquet quam id dui posuere blandit. Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada.</p>
+      <ul>
+        <li>list item 1</li>
+        <li>list item 1</li>
+        <li>list item 1</li>
+        <li>list item 1</li>
+      </ul>
+      <p class="highlight">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Cras ultricies ligula sed magna dictum porta. Pellentesque in ipsum id orci porta dapibus. Curabitur aliquet quam id dui posuere blandit. Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada.</p>
       <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Cras ultricies ligula sed magna dictum porta. Pellentesque in ipsum id orci porta dapibus. Curabitur aliquet quam id dui posuere blandit. Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada.</p>
 
       <hr>
@@ -58,11 +88,7 @@
       <p>The <var>var element</var> example</p>
 
       <!-- Quotes -->
-
-      <figure class="blockquote">
-        <blockquote><p>Quote</p></blockquote>
-        <figcaption>Author</figcaption>
-      </figure>
+      <blockquote><p>Quote - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus.</p></blockquote>
 
       <address>
         <p>Address line</p>
@@ -71,19 +97,7 @@
       </address>
       <hr>
 
-      <p><strong>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Donec rutrum congue leo eget malesuada. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus.</strong></p>
-      <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Cras ultricies ligula sed magna dictum porta. Pellentesque in ipsum id orci porta dapibus. Curabitur aliquet quam id dui posuere blandit. Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada.</p>
-      <ul>
-        <li>list item 1</li>
-        <li>list item 1</li>
-        <li>list item 1</li>
-        <li>list item 1</li>
-      </ul>
-      <p class="highlight">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Cras ultricies ligula sed magna dictum porta. Pellentesque in ipsum id orci porta dapibus. Curabitur aliquet quam id dui posuere blandit. Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada.</p>
-      <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Cras ultricies ligula sed magna dictum porta. Pellentesque in ipsum id orci porta dapibus. Curabitur aliquet quam id dui posuere blandit. Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada.</p>
-      <div class="error">*This article is current as of the date of its publication and does not necessarily reflect the present state of the law or relevant regulation.</div>
-
-      <p>Table</p>
+      <h3 class="sg-title">Table</h3>
       <table>
         <thead>
           <tr>
@@ -170,19 +184,44 @@
           <div><label for="required-input">Required input <span class="required">*</span></label> <input id="required-input" type="text" required aria-required="true"></div>
           <div><label for="email-input">Email input</label> <input id="email-input" type="email"></div>
           <div><label for="search-input">Search input</label><div class="search-wrapper"><input class="search-input" type="search"><input type="submit" class="search-submit" value="search"/></div></div>
-          <div><label for="speech-input">Speech recognition input</label> <input id="speech-input" type="text" name="speech" x-webkit-speech=""></div>
+          <!-- <div><label for="speech-input">Speech recognition input</label> <input id="speech-input" type="text" name="speech" x-webkit-speech=""></div> -->
           <div><label for="tel-input">Tel input</label> <input id="tel-input" type="tel"></div>
           <div><label for="url-input">URL input</label> <input id="url-input" type="url" placeholder="http://"></div>
           <div><label for="password-input">Password input</label> <input id="password-input" type="password" value="password"></div>
           <div><label for="select-field">Select field</label> <select id="select-field"><option selected="selected">Option 01</option><option>Option 02</option></select></div>
-          <div><label for="multiple-select-field">Multiple select field</label><select id="multiple-select-field" multiple size="5"><option>Option 1</option><option>Option 2</option><option>Option 3</option><option>Option 4</option><option>Option 5</option><option>Option 6</option><option>Option 7</option><option>Option 8</option><option>Option 9</option><option>Option 10</option></select></div>
-          <div><label for="radio-input"><input id="radio-input" type="radio" name="rad"> Radio input</label></div>
-          <div><input class="checkbox-input" type="checkbox"> <label for="checkbox-input">Checkbox input</label></div>
-          <div><label for="file-input">File input</label> <input id="file-input" type="file"></div>
-          <div><label for="textarea">Textarea</label> <textarea id="textarea" cols="30" rows="5" >Textarea text</textarea></div>
-          <div><label for="color-input">Color input</label> <input id="color-input" type="color" value="#000000"></div>
-          <div><label for="number-input">Number input</label> <input id="number-input" type="number" value="5" min="0" max="10"></div>
-          <div><label for="range-input">Range input</label> <input id="range-input" type="range" value="0" min="0" max="100"> <output>0</output>
+          <div>
+            <label for="multiple-select-field">Multiple select field</label>
+            <select id="multiple-select-field" multiple size="5">
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+              <option>Option 4</option>
+              <option>Option 5</option>
+              <option>Option 6</option>
+              <option>Option 7</option>
+              <option>Option 8</option>
+              <option>Option 9</option>
+              <option>Option 10</option>
+            </select>
+          </div>
+          <div>
+            <input id="radio-input" type="radio" name="rad"><label for="radio-input">Radio input</label>
+            <input id="radio-input" type="radio" name="rad"><label for="radio-input">Radio input</label>
+          </div>
+          <div>
+            <input class="checkbox-input" type="checkbox"> <label for="checkbox-input">Checkbox input</label>
+            <input class="checkbox-input" type="checkbox"> <label for="checkbox-input">Checkbox input</label>
+          </div>
+          <div>
+            <label for="file-input">File input</label> <input id="file-input" type="file">
+          </div>
+          <div>
+            <label for="textarea">Textarea</label>
+            <textarea id="textarea" cols="30" rows="5" placeholder="Textarea..." ></textarea>
+          </div>
+          <!-- <div><label for="color-input">Color input</label> <input id="color-input" type="color" value="#000000"></div> -->
+          <!-- <div><label for="number-input">Number input</label> <input id="number-input" type="number" value="5" min="0" max="10"></div> -->
+          <!-- <div><label for="range-input">Range input</label> <input id="range-input" type="range" value="0" min="0" max="100"> <output>0</output>
             <script>
             if (document.querySelector) {
               document.querySelector('#range-input').onchange = function(e) {
@@ -190,15 +229,18 @@
               }
             }
             </script>
-          </div>
+          </div> -->
           <div><label for="date-input">Date input</label> <input id="date-input" type="date"></div>
-          <div><label for="month-input">Month input</label> <input id="month-input" type="month"></div>
-          <div><label for="week-input">Week input</label> <input id="week-input" type="week"></div>
+          <!-- <div><label for="month-input">Month input</label> <input id="month-input" type="month"></div> -->
+          <!-- <div><label for="week-input">Week input</label> <input id="week-input" type="week"></div> -->
           <div><label for="time-input">Time input</label> <input id="time-input" type="time"></div>
           <div><label for="datetime-input">Datetime input</label> <input id="datetime-input" type="datetime"></div>
           <div><label for="datetime-local-input">Datetime-local input</label> <input id="datetime-local-input" type="datetime-local"></div>
         </fieldset>
-        <input type="submit" value="Submit form">
+        <div class="form-actions">
+          <input type="submit" value="Submit form">
+          <a href="#">Cancel</a>
+        </div>
       </form>
     </div>
 
